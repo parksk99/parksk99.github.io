@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "ko-KR"
 title                    : "Temp Title"
 title_separator          : "&#124"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "공부하다 화나는 부분 기록함" # site tagline that appears below site title in masthead
 name                     : "박성규"
 description              : "Study blog."
 url                      : "https://parksk99.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -27,8 +27,9 @@ repository               : "parksk99/parksk99.github.io" # GitHub username/repo-
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "하하하" # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
+
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
@@ -70,6 +71,7 @@ algolia:
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
+  
 # SEO Related
 google_site_verification :
 bing_site_verification   :
@@ -103,7 +105,7 @@ analytics:
 author:
   name             : "Gyu"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a studing person."
+  bio              : "I am angry student."
   location         : "Incheon"
   email            : "qkrtjdrb99@naver.com"
   links:
