@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "Temp Title"
+title                    : "hahaha"
 title_separator          : "&#124"
 subtitle                 : "공부하다 화나는 부분 기록함" # site tagline that appears below site title in masthead
 name                     : "박성규"
@@ -288,8 +288,8 @@ defaults:
       related: true
   # _pages
   - scope:
-  	path: "_pages"
-  	type: pages
-  	values:
-  		layout: single
-  		author_profile: true
+path: "_pages"
+type: pages
+values:
+layout: single
+author_profile: true
