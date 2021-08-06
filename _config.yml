@@ -12,12 +12,12 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
 title                    : "hahaha"
-title_separator          : "&#124"
+title_separator          : "|"
 subtitle                 : "공부하다 화나는 부분 기록함" # site tagline that appears below site title in masthead
 name                     : "박성규"
 description              : "Study blog."
