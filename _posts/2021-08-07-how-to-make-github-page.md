@@ -7,16 +7,19 @@ title: 깃허브 블로그 만들기
 ***
 ![repository](/assets/how_to_make_github_page/make_repository.png)
 
-repository 이름은 꼭 (자기아이디).github.io로 해야됨
+repository 이름은 꼭 (자기아이디).github.io로 해야됨   
 ex) parksk99.github.io   
 Add readme file을 꼭 누르라는데 이유는 잘 모르겠음
+
 일단 하라는대로 하는걸로 ㅎ.ㅎ
+
 
 # 2. repository 클론 하기
 
 ***
 자기 컴퓨터 원하는 위치에 클론하기
-이건 알아서 하는거로
+이건 알아서 하셈
+
 
 # 3. ruby설치
 
@@ -24,6 +27,7 @@ Add readme file을 꼭 누르라는데 이유는 잘 모르겠음
 [ruby 설치는 여기서][ruby link]
 
 [ruby link]: https://www.ruby-lang.org/ko/downloads/ "ruby link"
+
 
 # 4. bundle과 jekyll설치
 
@@ -38,6 +42,7 @@ jekyll(지킬이라고 읽는대요)을 통해 블로그 인터페이스를 쉽�
 
 끝
 
+
 # 5. 원하는 테마 고르기
 
 ***
@@ -47,6 +52,7 @@ jekyll 테마를 검색해보면 아주 많이 나옴
 
 ![download](/assets/how_to_make_gitub_page/download.png)
 위 사진의 Download Zip을 눌러서 통째로 다운받음
+
 
 # 6. 테마 설정
 
