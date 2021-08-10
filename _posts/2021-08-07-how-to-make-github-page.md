@@ -50,7 +50,7 @@ jekyll 테마를 검색해보면 아주 많이 나옴
 이 블로그 테마이름은 minimal-mistakes-master
 테마 찾아서 눌러보면 깃허브로 들어가짐
 
-![download](/assets/how_to_make_gitub_page/download.png)
+![download](/assets/how_to_make_github_page/download.png)
 위 사진의 Download Zip을 눌러서 통째로 다운받음
 
 
