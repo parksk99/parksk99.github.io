@@ -48,4 +48,4 @@ $git commit --amend
 
 ![git structure](/assets/restore_file_in_git/git_structure.png)
 
-git reset test
+git reset test 
