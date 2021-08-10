@@ -94,4 +94,12 @@ github에 있는 파일과 working dir에 있는 파일이 달라지니까 merge
 *푸시도 중요할때 한번*   
 * category 만들다가 화나서 복구하는 와중에   
 잘 모르고 썼던 git에대해 배우게 됨...   
-* rebase는 머지?
+역시 화가나야 잘 배우는듯
+* rebase는 머지?   
+* branch를 쓰면 더 안전하다   
+branch쓰는 습관 들이기
+
+# 참고자료
+[참고한 문서][reference]
+
+[reference]: https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0#_git_reset "refer"
