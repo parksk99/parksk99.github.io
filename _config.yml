@@ -112,6 +112,9 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "qkrtjdrb99@naver.com"
+    - label: "Github"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/parksk99"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -136,10 +139,10 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/parksk99"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
-      url: "https://github.com/parksk99"
+      # url:
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
