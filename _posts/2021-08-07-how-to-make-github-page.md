@@ -1,6 +1,7 @@
 ---
 title: 깃허브 블로그 만들기
 category: [Github_pages]
+tag: [Github_pages]
 ---
 
 # 1. 깃허브에서 자기 아이디로 된 repository 생성

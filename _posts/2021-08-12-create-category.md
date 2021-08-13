@@ -1,6 +1,7 @@
 ---
 title: github page 카테고리 만드는법
 category: [Github_pages]
+tag: [Github_pages]
 ---
 
 # 카테고리 쉽게 만들기   

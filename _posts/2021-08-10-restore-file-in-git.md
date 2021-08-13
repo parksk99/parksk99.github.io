@@ -1,6 +1,7 @@
 ---
 title: git에서 파일 되돌리기
 categories: [Git]
+tag: [Git]
 ---
 
 # 너무 망쳐버려서 git에 올려놓은 내용으로 돌아가고 싶을때   
