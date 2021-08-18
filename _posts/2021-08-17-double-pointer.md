@@ -13,7 +13,7 @@ tag: [c++,pointer]
 연결리스트에서 마지막 노드 뒤에 새로운 노드를 연결하는 기능을   
 마지막 위치를 찾는 find()메소드와 add(int)메소드   
 두개로 나눠서 코드를 작성할 것이다.
-```c++
+{% highlight c linenos%}
 Node* find(){
 	Node* last;
 
@@ -26,7 +26,7 @@ void add(int item){
 	Node* tmp = find();
 	tmp -> next = new Node(item);
 }
-```
+{% endhighlight %}
 여기서 주목할 것은 add(int) 메소드 안에있는 다음 한줄
 ```c++
 tmp -> next = new Node(item); //이걸 next를 안쓰고 코드를 작성해봄
