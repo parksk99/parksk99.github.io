@@ -29,6 +29,7 @@ title: Git
 (/categories/Git.md 파일 내용)
 
 이러면 Git이라는 이름의 카테고리가 만들어진거
+>수정) 근데 없어도 잘된다. 뭐임?
 
 ## 3. /categories/index.html 파일 생성
 
