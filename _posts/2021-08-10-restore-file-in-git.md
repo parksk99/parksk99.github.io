@@ -2,6 +2,9 @@
 title: git에서 파일 되돌리기
 categories: [Git]
 tag: [Git]
+toc: true
+toc_label: "목차"
+toc_sticky: true
 ---
 
 # 너무 망쳐버려서 git에 올려놓은 내용으로 돌아가고 싶을때   

@@ -2,6 +2,9 @@
 title: (c++) virtual이란?
 category: [cpp]
 tag: [cpp]
+toc: true
+toc_label: "목차"
+toc_sticky: true
 ---
 
 c++ virtual

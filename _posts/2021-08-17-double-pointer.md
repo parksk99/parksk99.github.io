@@ -2,6 +2,9 @@
 title: 더블포인터 사용
 category: [cpp]
 tag: [cpp,pointer]
+toc: true
+toc_label: "목차"
+toc_sticky: true
 ---
 # 더블포인터를 사용하는 경우 중 하나
 

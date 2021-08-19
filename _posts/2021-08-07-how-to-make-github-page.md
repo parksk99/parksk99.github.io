@@ -67,3 +67,6 @@ jekyll 테마를 검색해보면 아주 많이 나옴
 * (자기아이디).github.io를 주소에 치면 들어갈수 있다   
 
 ## 글 올리는 방법은 다음 기회에...
+[minimal-mistakes-master 테마 홈페이지][minimal-mistakes-master]
+
+[minimal-mistakes-master]: https://mmistakes.github.io/minimal-mistakes/docs/helpers/

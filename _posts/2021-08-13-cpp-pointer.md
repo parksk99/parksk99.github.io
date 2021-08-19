@@ -2,6 +2,9 @@
 title: 포인터 꿀팁
 category: [cpp]
 tag: [cpp,pointer]
+toc: true
+toc_label: "목차"
+toc_sticky: true
 ---
 포인터 꿀팁
 ===

@@ -2,6 +2,9 @@
 title: github page 카테고리 만드는법
 category: [Github_pages]
 tag: [Github_pages]
+toc: true
+toc_label: "목차"
+toc_sticky: true
 ---
 
 # 카테고리 쉽게 만들기   
