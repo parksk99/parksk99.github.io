@@ -1,7 +1,7 @@
 ---
 title: 더블포인터 사용
-category: [c++]
-tag: [c++,pointer]
+category: [cpp]
+tag: [cpp,pointer]
 ---
 # 더블포인터를 사용하는 경우 중 하나
 
