@@ -29,4 +29,4 @@ _asset_bundler_cache
 _site
 
 # sample post
-posts/sample.md
+_posts/sample.md
