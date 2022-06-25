@@ -40,6 +40,7 @@ bool compare(int a, int b){
 
 ### 리스트 원소가 범용적이지 않은 경우
 학생의 이름과 키를 저장하는 pair<string, int> 배열이 있다고 가정하자. 키순으로 학생을 정렬하고 싶다면 compare함수에서 정의해주면 된다.
+
 ```cpp
 #include<iostream>
 #include<algorithm>
