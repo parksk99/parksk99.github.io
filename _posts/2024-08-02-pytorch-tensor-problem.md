@@ -3,6 +3,9 @@ title: "pytorch 텐서의 디바이스 이동 시 값 초기화 문제"
 category: [AI]
 tag: [pytorch]
 comments: true
+toc: true
+toc_label: 목차
+toc_sticky: true
 ---
 
 # 문제 상황
