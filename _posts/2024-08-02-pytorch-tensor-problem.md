@@ -40,6 +40,7 @@ print(torch.__version__)
 ### 기존 드라이버 제거
 ```sh
 sudo apt-get purge nvidia*
+sudo apt-get autoremove
 ```
 ### NVIDIA 드라이버 PPA 추가
 ```sh
