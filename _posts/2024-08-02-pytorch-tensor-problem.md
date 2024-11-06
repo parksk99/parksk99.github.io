@@ -63,3 +63,10 @@ sudo apt-get install nvidia-driver-525
 sudo shutdown -r now # 재부팅
 nvidia-smi
 ```
+
+### 자동 업데이트 제외
+계속 자동 업데이트 돼서 실행중인 프로세스가 죽는 경우가 많다.
+그래픽 드라이버만 업데이트 제외하는 명령어.
+```sh
+sudo apt-mark hold nvidia-driver-525
+```
