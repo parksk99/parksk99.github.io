@@ -16,10 +16,12 @@ ViT가 vision task에서 좋은 성능을 보여주고 있고 real world에 적�
 # 제안 방법
 ## Attack Objective Formulation
 Perturbation의 강도에 제한을 두지는 않고, 공격할 패치의 숫자만 제한을 둔다.
-Loss 함수 $J$와 입력 $X=[x_1,...,x_n]\in R^{n\times d}$에 대해 공격 objective는 다음과 같다.   
+Loss 함수 $J$와 입력 $X=[x_1,...,x_n]\in R^{n\times d}$에 대해 공격 objective는 다음과 같다.
+
 $$
 arg max_{p,E}\ J(X+1_p\cdot E, y)
 $$   
+
 여기서 $E$는 perturbation이고 $1_p$는 $E$를 적용할 위치를 나타낸 mask이다.
 위 수식의 파라미터는 $p$와 $E$이기 때문에 공격이 성공할 perturbation과, 그것을 적용할 위치를 찾는 것이 관건이다.
 
@@ -49,6 +51,7 @@ p = atten_layer.argsort(descending=True)[:, :args.num_patch] # 내림차순으�
 ## Attention-Aware Optimization
 위에서 패치를 적용할 위치 $p$를 결정했고, 이번에는 어떤 $E$를 넣을지 결정해야 한다.
 이 논문에서 선택한 방법은 다음 수식과 같이 중요한 패치 $p$의 중요도를 최대화 하는 것이다.
+
 $$
 \begin{aligned}
 J_{Attn}(X,p) &= \Sigma_j c_{ij}\\
