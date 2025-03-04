@@ -16,10 +16,10 @@ ViT가 vision task에서 좋은 성능을 보여주고 있고 real world에 적�
 # 제안 방법
 ## Attack Objective Formulation
 Perturbation의 강도에 제한을 두지는 않고, 공격할 패치의 숫자만 제한을 둔다.
-Loss 함수 $J$와 입력 $X=[x_1,...,x_n]\in R^{n\times d}$에 대해 공격 objective는 다음과 같다.
+Loss 함수 $J$와 입력 $X=[x_1,...,x_n]\in R^{n\times d}$에 대해 공격 objective는 다음과 같다.   
 $$
 arg max_{p,E}\ J(X+1_p\cdot E, y)
-$$
+$$   
 여기서 $E$는 perturbation이고 $1_p$는 $E$를 적용할 위치를 나타낸 mask이다.
 위 수식의 파라미터는 $p$와 $E$이기 때문에 공격이 성공할 perturbation과, 그것을 적용할 위치를 찾는 것이 관건이다.
 
@@ -27,9 +27,11 @@ $$
 패치를 적용할 위치 $p$를 선정하기 위해 attention을 사용한다.
 이 논문에서 사용한 방법은 attention map에서 top-K 패치를 선택하는 것이다.
 우선 $n\times n$ 크기의 attention map이 있을 때, 이 행렬 M은 다음과 같이 $n$개의 열벡터로 표현할 수 있다.
+
 $$
 M=[c_1, ..., c_n]\\
 (importance\ of\ i^{th}\ patch)=\Sigma_j\ c_{ij}$$
+
 열벡터 $c_i$는 i번째 토큰에 대한 다른 모든 토큰과의 연관도를 의미하기 때문에, 평균을 내면 i번째 토큰의 중요도를 나타낼 수 있다. 
 여기서 $c_{ij}$는 스칼라로 열벡터 $c_i = [c_{i1},...,c_{in}]$의 원소이며, i번째 패치의 중요도 중 상위 K개의 인덱스를 선택하여 패치를 적용할 위치를 결정한다.
 
@@ -54,6 +56,7 @@ J(X+E, y,p) &= J_{CE}(X+E,y)+\alpha J_{Attn}(X+E,p)\\
 argmax_{p,E}\ &J(X+E,y,p)
 \end{aligned}
 $$
+
 여기서 $\alpha$는 $J_{Attn}$의 중요도를 조절하는 하이퍼파라미터이고 0.002로 설정한다.
 $E$를 업데이트 하는 방법은 PGD의 방식을 따른다.
 
