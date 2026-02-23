@@ -1,0 +1,105 @@
+---
+layout: default
+---
+
+<div class="cv-landing">
+  <!-- Header / Hero Section -->
+  <header class="cv-hero wow-fadeIn">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ site.author.name }}</h1>
+      <p class="hero-subtitle">{{ site.author.bio }}</p>
+      
+      <div class="hero-links">
+        {% for link in site.author.links %}
+          <a href="{{ link.url }}" target="_blank" class="hero-link"><i class="{{ link.icon }}"></i> {{ link.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Sections -->
+  <div class="cv-body">
+
+    <!-- About Section (Optional) -->
+    <section class="cv-section fade-in-up">
+      <h2 class="section-title">About Me</h2>
+      <div class="section-content cv-card">
+        {{ content }}
+      </div>
+    </section>
+
+    <!-- Experience -->
+    {% if site.data.cv.experience %}
+    <section class="cv-section fade-in-up">
+      <h2 class="section-title">Experience</h2>
+      <div class="cv-grid">
+        {% for exp in site.data.cv.experience %}
+        <div class="cv-card experience-card">
+          <div class="card-header">
+            <h3>{{ exp.role }}</h3>
+            <span class="card-date">{{ exp.duration }}</span>
+          </div>
+          <h4 class="card-subtitle">{{ exp.organization }}</h4>
+          <p>{{ exp.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- Skills -->
+    {% if site.data.cv.skills %}
+    <section class="cv-section fade-in-up">
+      <h2 class="section-title">Skills</h2>
+      <div class="cv-grid skills-grid">
+        {% for skill in site.data.cv.skills %}
+        <div class="cv-card skill-card">
+          <h3>{{ skill.title }}</h3>
+          <ul class="skill-list">
+            {% for item in skill.items %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- Publications -->
+    {% if site.data.cv.publications %}
+    <section class="cv-section fade-in-up">
+      <h2 class="section-title">Publications</h2>
+      <div class="cv-list">
+        {% for pub in site.data.cv.publications %}
+        <div class="cv-card list-card">
+          <h3>{{ pub.title }}</h3>
+          <p class="pub-authors">{{ pub.authors }}</p>
+          <p class="pub-venue"><em>{{ pub.venue }}</em>, {{ pub.date }}</p>
+          {% if pub.link %}
+            <a href="{{ pub.link }}" target="_blank" class="btn btn--primary btn--small">View Publication</a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- Awards -->
+    {% if site.data.cv.awards %}
+    <section class="cv-section fade-in-up">
+      <h2 class="section-title">Awards & Honors</h2>
+      <div class="cv-list">
+        {% for award in site.data.cv.awards %}
+        <div class="cv-card list-card">
+          <h3>{{ award.title }}</h3>
+          <p class="award-issuer">{{ award.issuer }}</p>
+          <span class="card-date">{{ award.date }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+  </div>
+</div>

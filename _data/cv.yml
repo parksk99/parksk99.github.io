@@ -1,0 +1,31 @@
+skills:
+  - title: "Programming Languages"
+    items:
+      - "C / C++"
+      - "Python"
+      - "JavaScript"
+      - "HTML / CSS"
+  - title: "Frameworks & Tools"
+    items:
+      - "PyTorch"
+      - "Git / GitHub"
+      - "Linux / Unix"
+      - "Jekyll"
+
+experience:
+  - role: "Graduate Student"
+    organization: "Unknown University"
+    duration: "202X - Present"
+    description: "Studying hard and getting angry occasionally."
+
+awards:
+  - title: "Best Paper Award"
+    issuer: "Awesome Conference 202X"
+    date: "202X"
+
+publications:
+  - title: "An In-Depth Analysis of Why Graduate Students Get Angry"
+    authors: "Seongkyu Park, et al."
+    venue: "Journal of Graduate Studies"
+    date: "202X"
+    link: "#"
