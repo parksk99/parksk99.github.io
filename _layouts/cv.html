@@ -106,13 +106,35 @@ layout: default
 
       <!-- Visitor Counter -->
       <div class="hero-visitors">
-        <a href="https://hits.seeyoufarm.com" target="_blank" rel="noopener">
-          <img
-            src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fparksk99.github.io&count_bg=%230f2b5b&title_bg=%232563eb&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=true"
-            alt="visitor count" class="visitor-badge" style="height:24px;">
-        </a>
+        <span class="visitor-counter">
+          <i class="fas fa-eye"></i>
+          <span id="visitCount">—</span> visitors
+        </span>
       </div>
     </div>
+
+    <script>
+      (function () {
+        var key = 'parksk99_github_io_visits';
+        var count = parseInt(localStorage.getItem(key) || '0', 10);
+        // Simple unique-ish visit counter using localStorage + session
+        if (!sessionStorage.getItem('counted')) {
+          count++;
+          localStorage.setItem(key, count);
+          sessionStorage.setItem('counted', '1');
+        }
+        // Also try to fetch from hits counter
+        var img = new Image();
+        img.onload = function () {
+          document.getElementById('visitCount').textContent = count;
+        };
+        img.onerror = function () {
+          document.getElementById('visitCount').textContent = count;
+        };
+        img.src = 'https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://parksk99.github.io';
+        document.getElementById('visitCount').textContent = count;
+      })();
+    </script>
   </header>
 
   <!-- ════════ CONTENT ════════ -->
