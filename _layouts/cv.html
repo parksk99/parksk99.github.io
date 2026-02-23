@@ -2,45 +2,154 @@
 layout: default
 ---
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet">
+
 <div class="cv-landing">
-  <!-- Header / Hero Section -->
-  <header class="cv-hero wow-fadeIn">
+
+  <!-- ════════ HERO with STAR FIELD ════════ -->
+  <header class="cv-hero">
+    <!-- ★ Star field — 30 tiny stars scattered across the hero -->
+    <div class="star-field">
+      <span class="star" style="top:5%;left:8%;animation-delay:0s;"></span>
+      <span class="star" style="top:12%;left:22%;animation-delay:1.2s;"></span>
+      <span class="star" style="top:8%;left:45%;animation-delay:0.5s;"></span>
+      <span class="star" style="top:15%;left:67%;animation-delay:2.3s;"></span>
+      <span class="star" style="top:6%;left:82%;animation-delay:0.8s;"></span>
+      <span class="star" style="top:22%;left:4%;animation-delay:1.8s;"></span>
+      <span class="star" style="top:28%;left:35%;animation-delay:3.1s;"></span>
+      <span class="star" style="top:18%;left:55%;animation-delay:0.3s;"></span>
+      <span class="star" style="top:25%;left:90%;animation-delay:2.7s;"></span>
+      <span class="star" style="top:35%;left:15%;animation-delay:1.5s;"></span>
+      <span class="star" style="top:40%;left:50%;animation-delay:0.9s;"></span>
+      <span class="star" style="top:32%;left:75%;animation-delay:2.0s;"></span>
+      <span class="star" style="top:45%;left:28%;animation-delay:3.5s;"></span>
+      <span class="star" style="top:50%;left:65%;animation-delay:1.1s;"></span>
+      <span class="star" style="top:55%;left:10%;animation-delay:2.4s;"></span>
+      <span class="star" style="top:48%;left:88%;animation-delay:0.6s;"></span>
+      <span class="star" style="top:60%;left:42%;animation-delay:3.8s;"></span>
+      <span class="star" style="top:65%;left:18%;animation-delay:1.7s;"></span>
+      <span class="star" style="top:58%;left:78%;animation-delay:0.2s;"></span>
+      <span class="star" style="top:70%;left:55%;animation-delay:2.9s;"></span>
+      <span class="star star--big" style="top:10%;left:30%;animation-delay:1.0s;"></span>
+      <span class="star star--big" style="top:38%;left:62%;animation-delay:2.5s;"></span>
+      <span class="star star--big" style="top:55%;left:25%;animation-delay:0.7s;"></span>
+      <span class="star star--big" style="top:20%;left:85%;animation-delay:3.3s;"></span>
+      <span class="star star--big" style="top:72%;left:40%;animation-delay:1.4s;"></span>
+      <span class="star star--dim" style="top:3%;left:58%;animation-delay:2.1s;"></span>
+      <span class="star star--dim" style="top:42%;left:7%;animation-delay:0.4s;"></span>
+      <span class="star star--dim" style="top:68%;left:72%;animation-delay:3.0s;"></span>
+      <span class="star star--dim" style="top:78%;left:20%;animation-delay:1.6s;"></span>
+      <span class="star star--dim" style="top:80%;left:92%;animation-delay:2.8s;"></span>
+    </div>
+
     <div class="hero-content">
+      <!-- Badge -->
+      <div class="hero-badge">
+        <i class="fas fa-graduation-cap"></i> CV / Portfolio
+      </div>
+
+      <!-- Profile Photo -->
+      <div class="hero-photo">
+        <img src="/assets/images/profile.jpg" alt="{{ site.author.name }}">
+      </div>
+
+      <!-- Name -->
+      {% if site.data.cv.hero %}
+      <h1 class="hero-title">{{ site.data.cv.hero.name }}</h1>
+      {% if site.data.cv.hero.name_ko %}
+      <p class="hero-name-ko">{{ site.data.cv.hero.name_ko }}</p>
+      {% endif %}
+      {% if site.data.cv.hero.tagline %}
+      <p class="hero-tagline">{{ site.data.cv.hero.tagline }}</p>
+      {% endif %}
+      {% if site.data.cv.hero.description %}
+      <p class="hero-desc">{{ site.data.cv.hero.description }}</p>
+      {% endif %}
+
+      <!-- Highlight chips -->
+      {% if site.data.cv.hero.highlights %}
+      <div class="hero-highlights">
+        {% for h in site.data.cv.hero.highlights %}
+        <div class="hero-chip">
+          <span class="chip-label">{{ h.label }}</span>
+          <span class="chip-value">{{ h.value }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% else %}
       <h1 class="hero-title">{{ site.author.name }}</h1>
-      <p class="hero-subtitle">{{ site.author.bio }}</p>
-      
+      <p class="hero-tagline">{{ site.author.bio }}</p>
+      {% endif %}
+
+      <!-- Contact & Links -->
+      <div class="hero-meta">
+        {% if site.author.location %}
+        <span class="hero-meta-item">
+          <i class="fas fa-map-marker-alt"></i> {{ site.author.location }}
+        </span>
+        {% endif %}
+        {% if site.author.email %}
+        <span class="hero-meta-item">
+          <i class="fas fa-envelope"></i> {{ site.author.email }}
+        </span>
+        {% endif %}
+      </div>
       <div class="hero-links">
         {% for link in site.author.links %}
-          <a href="{{ link.url }}" target="_blank" class="hero-link"><i class="{{ link.icon }}"></i> {{ link.label }}</a>
+        <a href="{{ link.url }}" target="_blank" class="hero-link">
+          <i class="{{ link.icon }}"></i> {{ link.label }}
+        </a>
         {% endfor %}
+      </div>
+
+      <!-- Visitor Counter -->
+      <div class="hero-visitors">
+        <a href="https://hits.seeyoufarm.com" target="_blank" rel="noopener">
+          <img
+            src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fparksk99.github.io&count_bg=%230f2b5b&title_bg=%232563eb&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=true"
+            alt="visitor count" class="visitor-badge" style="height:24px;">
+        </a>
       </div>
     </div>
   </header>
 
-  <!-- Content Sections -->
+  <!-- ════════ CONTENT ════════ -->
   <div class="cv-body">
 
-    <!-- About Section (Optional) -->
-    <section class="cv-section fade-in-up">
-      <h2 class="section-title">About Me</h2>
-      <div class="section-content cv-card">
+    <!-- About -->
+    {% if content != "" %}
+    <section class="cv-section">
+      <div class="section-header">
+        <span class="section-icon"><i class="fas fa-user"></i></span>
+        <h2 class="section-title">About</h2>
+      </div>
+      <div class="about-card glass-card">
         {{ content }}
       </div>
     </section>
+    {% endif %}
 
-    <!-- Experience -->
+    <!-- Experience (TIMELINE) -->
     {% if site.data.cv.experience %}
-    <section class="cv-section fade-in-up">
-      <h2 class="section-title">Experience</h2>
-      <div class="cv-grid">
+    <section class="cv-section">
+      <div class="section-header">
+        <span class="section-icon"><i class="fas fa-briefcase"></i></span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="timeline">
         {% for exp in site.data.cv.experience %}
-        <div class="cv-card experience-card">
-          <div class="card-header">
-            <h3>{{ exp.role }}</h3>
-            <span class="card-date">{{ exp.duration }}</span>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <h3>{{ exp.role }}</h3>
+              <span class="timeline-date">{{ exp.duration }}</span>
+            </div>
+            <h4 class="timeline-org">{{ exp.organization }}</h4>
+            <p class="timeline-desc">{{ exp.description }}</p>
           </div>
-          <h4 class="card-subtitle">{{ exp.organization }}</h4>
-          <p>{{ exp.description }}</p>
         </div>
         {% endfor %}
       </div>
@@ -49,17 +158,20 @@ layout: default
 
     <!-- Skills -->
     {% if site.data.cv.skills %}
-    <section class="cv-section fade-in-up">
-      <h2 class="section-title">Skills</h2>
-      <div class="cv-grid skills-grid">
+    <section class="cv-section">
+      <div class="section-header">
+        <span class="section-icon"><i class="fas fa-code"></i></span>
+        <h2 class="section-title">Skills</h2>
+      </div>
+      <div class="skills-container">
         {% for skill in site.data.cv.skills %}
-        <div class="cv-card skill-card">
-          <h3>{{ skill.title }}</h3>
-          <ul class="skill-list">
+        <div class="skill-group glass-card">
+          <h3 class="skill-group-title">{{ skill.title }}</h3>
+          <div class="skill-tags">
             {% for item in skill.items %}
-            <li>{{ item }}</li>
+            <span class="skill-tag">{{ item }}</span>
             {% endfor %}
-          </ul>
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -68,17 +180,25 @@ layout: default
 
     <!-- Publications -->
     {% if site.data.cv.publications %}
-    <section class="cv-section fade-in-up">
-      <h2 class="section-title">Publications</h2>
-      <div class="cv-list">
+    <section class="cv-section">
+      <div class="section-header">
+        <span class="section-icon"><i class="fas fa-book"></i></span>
+        <h2 class="section-title">Publications</h2>
+      </div>
+      <div class="pub-list">
         {% for pub in site.data.cv.publications %}
-        <div class="cv-card list-card">
-          <h3>{{ pub.title }}</h3>
-          <p class="pub-authors">{{ pub.authors }}</p>
-          <p class="pub-venue"><em>{{ pub.venue }}</em>, {{ pub.date }}</p>
-          {% if pub.link %}
-            <a href="{{ pub.link }}" target="_blank" class="btn btn--primary btn--small">View Publication</a>
-          {% endif %}
+        <div class="pub-item glass-card">
+          <div class="pub-number">{{ forloop.index }}</div>
+          <div class="pub-content">
+            <h3 class="pub-title">{{ pub.title }}</h3>
+            <p class="pub-authors">{{ pub.authors }}</p>
+            <p class="pub-venue"><em>{{ pub.venue }}</em>, {{ pub.date }}</p>
+            {% if pub.link %}
+            <a href="{{ pub.link }}" target="_blank" class="pub-link">
+              <i class="fas fa-external-link-alt"></i> View Paper
+            </a>
+            {% endif %}
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -87,19 +207,24 @@ layout: default
 
     <!-- Awards -->
     {% if site.data.cv.awards %}
-    <section class="cv-section fade-in-up">
-      <h2 class="section-title">Awards & Honors</h2>
-      <div class="cv-list">
+    <section class="cv-section">
+      <div class="section-header">
+        <span class="section-icon"><i class="fas fa-trophy"></i></span>
+        <h2 class="section-title">Awards &amp; Honors</h2>
+      </div>
+      <div class="awards-grid">
         {% for award in site.data.cv.awards %}
-        <div class="cv-card list-card">
+        <div class="award-card glass-card">
+          <div class="award-icon">🏆</div>
           <h3>{{ award.title }}</h3>
           <p class="award-issuer">{{ award.issuer }}</p>
-          <span class="card-date">{{ award.date }}</span>
+          <span class="award-date">{{ award.date }}</span>
         </div>
         {% endfor %}
       </div>
     </section>
     {% endif %}
 
-  </div>
-</div>
+  </div><!-- /cv-body -->
+
+</div><!-- /cv-landing -->

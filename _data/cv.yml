@@ -1,31 +1,98 @@
+# ═══════════════════════════════════════
+# Hero Section (히어로에 표시되는 내용)
+# ═══════════════════════════════════════
+hero:
+  name: "Seong-Gyu Park"
+  name_ko: "박성규"
+  tagline: "AI Security Researcher"
+  description: >
+    AI Security Researcher specializing in Trustworthy LLMs and AGI Safety. Dedicated to uncovering and mitigating vulnerabilities in the reasoning processes of Large Language Models (LLMs).
+  highlights:
+    - label: "Research"
+      value: "AI Security & Trustworthy LLMs"
+    - label: "Affiliation"
+      value: "Soongsil University"
+
+# ═══════════════════════════════════════
+# Research Interests (연구 분야)
+# ═══════════════════════════════════════
+research_interests:
+  - title: "LLM Reasoning Security"
+    icon: "brain"
+    description: "Detecting and mitigating backdoor attacks targeting the reasoning capabilities of Large Language Models."
+  - title: "Adversarial Machine Learning"
+    icon: "shield-alt"
+    description: "Developing robust detection and defense mechanisms against adversarial attacks on vision and language models."
+  - title: "Trustworthy AI"
+    icon: "check-circle"
+    description: "Building reliable and safe AI systems for deployment in high-stakes environments."
+  - title: "AI Safety & Alignment"
+    icon: "lock"
+    description: "Researching systematic approaches to ensure AI systems behave as intended and remain aligned with human values."
+
+# ═══════════════════════════════════════
+# Skills (기술 스택)
+# ═══════════════════════════════════════
 skills:
   - title: "Programming Languages"
     items:
       - "C / C++"
       - "Python"
-      - "JavaScript"
-      - "HTML / CSS"
   - title: "Frameworks & Tools"
     items:
       - "PyTorch"
       - "Git / GitHub"
       - "Linux / Unix"
-      - "Jekyll"
 
+# ═══════════════════════════════════════
+# Experience (경력 / 학력)
+# ═══════════════════════════════════════
 experience:
+  - role: "Researcher"
+    organization: "Soongsil University"
+    duration: "Mar 2026 - Present"
+    description: "Committed to building robust, safe, and reliable AI systems for high-stakes environments"
   - role: "Graduate Student"
-    organization: "Unknown University"
-    duration: "202X - Present"
-    description: "Studying hard and getting angry occasionally."
+    organization: "Soongsil University"
+    duration: "Mar 2024 - Feb 2026"
+    description: "Committed to building robust, safe, and reliable AI systems for high-stakes environments"
 
+# ═══════════════════════════════════════
+# Awards (수상 내역)
+# ═══════════════════════════════════════
 awards:
-  - title: "Best Paper Award"
-    issuer: "Awesome Conference 202X"
-    date: "202X"
+  - title: "Best Paper Award <br> (Minister's Award, Ministry of the Interior and Safety (MOIS), Republic of Korea)"
+    issuer: "Korea Institute of Information Security & Cryptology"
+    date: "2025"
 
+  - title: "President's Award, IT Software Competition"
+    issuer: "Soongsil University"
+    date: "2023"
+
+# ═══════════════════════════════════════
+# Publications (출판물 / 논문)
+# ═══════════════════════════════════════
 publications:
-  - title: "An In-Depth Analysis of Why Graduate Students Get Angry"
-    authors: "Seongkyu Park, et al."
-    venue: "Journal of Graduate Studies"
-    date: "202X"
+  - title: "STAR: Detecting Inference-time Backdoors in LLM Reasoning via State-Transition Amplification Ratio."
+    authors: "<strong>Seong-Gyu Park</strong>, Sohee Park, Jisu Lee, Hyunsik Na, Daeseon Choi."
+    venue: "arXiv:2601.08511 (Submitted to ACL 2026)"
+    date: "Jan 2026"
+    link: "https://arxiv.org/abs/2601.08511"
+
+  - title: "ASTRA: Adversarial Stealthy Trigger Reasoning Attacks for Black-Box LLMs"
+    authors: "<strong>Seong-Gyu Park</strong>, Sohee Park, Daeseon Choi"
+    venue: "The 30th Pacific-Asia Conference on Knowledge Discovery and Data Mining(PAKDD 2026)"
+    date: "Jun 2026 (To be presented)"
     link: "#"
+
+  - title: "Adversarial Image Detection for Vision Transformers via Attention Map"
+    authors: "<strong>Seong-Gyu Park</strong>, Hyunsik Na, Daeseon Choi"
+    venue: "IEEE International Conference on Advanced Visual and Signal-Based Systems (AVSS 2025)"
+    date: "Aug 2025"
+    link: "https://ieeexplore.ieee.org/abstract/document/11149702/"
+
+  - title: "Motion based user authentification for metaverse."
+    authors: "<strong>Seong-Gyu Park</strong>, Gwonsang Ryu"
+    venue: "Journal of the Korea Institute of Information Security & Cryptology (2024): 493-503."
+    date: "Jan 2025"
+    link: "https://ieeexplore.ieee.org/abstract/document/11149702/"

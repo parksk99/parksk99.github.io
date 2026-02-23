@@ -16,17 +16,17 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "화가난 대학원생"
+title                    : "Seong-Gyu Park"
 title_separator          : "|"
-subtitle                 : "공부하다 화나는 부분 기록함" # site tagline that appears below site title in masthead
-name                     : "박성규"
-description              : "Study blog."
+subtitle                 : "AI Security · Trustworthy LLMs · AGI Safety"
+name                     : "Seong-Gyu Park"
+description              : "Personal website and research portfolio of Seong-Gyu Park, AI Security Researcher at Soongsil University."
 url                      : "https://parksk99.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "parksk99/parksk99.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "화가난 대학원생" # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Seong-Gyu Park"
 breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
 
@@ -62,9 +62,9 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search                   : true
+search_full_content      : true
+search_provider          : lunr
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -105,49 +105,34 @@ analytics:
 
 # Site Author
 author:
-  name             : "Gyu"
+  name             : "Seong-Gyu Park"
   avatar           : "/assets/images/logo.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am angry student."
-  location         : "Inchoen,Korea"
-  email            : "qkrtjdrb99@naver.com"
+  bio              : "AI Security Researcher specializing in Trustworthy LLMs"
+  location         : "Seoul, Korea"
+  email            : "parksk99@soongsil.ac.kr"
   links:
-    - label: "Github"
+    - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/parksk99"
-    # - label: "Website"
-    #   icon: "fas fa-fw fa-link"
-    #   # url: "https://your-website.com"
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter-square"
-    #   # url: "https://twitter.com/"
-    # - label: "Facebook"
-    #   icon: "fab fa-fw fa-facebook-square"
-    #   # url: "https://facebook.com/"
-    # - label: "Instagram"
-    #   icon: "fab fa-fw fa-instagram"
-    #   # url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/parksk99"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=yq4pSJMAAAAJ&hl=en&oi=sra"
 
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/parksk99"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/seong._.kyu/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/parksk99"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:parksk99@soongsil.ac.kr"
 
 
 # Reading Files
@@ -296,8 +281,8 @@ defaults:
       
   # _pages
   - scope:
-    path: "_pages"
-    type: pages
+      path: "_pages"
+      type: pages
     values:
-    layout: single
-    author_profile: true
+      layout: single
+      author_profile: true

@@ -1,43 +1,78 @@
 ---
-layout: archive
+layout: default
 ---
 
-{{ content }}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet">
 
-{% assign categories_max = 0 %}
-{% for category in site.categories %}
-  {% if category[1].size > categories_max %}
-    {% assign categories_max = category[1].size %}
-  {% endif %}
-{% endfor %}
+<!-- ═══ Category Page Hero ═══ -->
+<div class="cat-hero">
+  <h1 class="cat-hero__title">
+    <i class="fas fa-folder-open"></i>
+    {{ page.title | default: "Categories" }}
+  </h1>
+  <p class="cat-hero__desc">Browse articles by category</p>
+</div>
 
-<ul class="taxonomy__index">
-  {% for i in (1..categories_max) reversed %}
-    {% for category in site.categories %}
-      {% if category[1].size == i %}
-        <li>
-          <a href="#{{ category[0] | slugify }}">
-            <strong>{{ category[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
-          </a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-</ul>
+<div class="cat-page">
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-{% for i in (1..categories_max) reversed %}
+  <!-- ═══ Category Chips (quick nav) ═══ -->
+  {% assign categories_max = 0 %}
   {% for category in site.categories %}
-    {% if category[1].size == i %}
-      <section id="{{ category[0] | slugify | downcase }}" class="taxonomy__section">
-        <h2 class="archive__subtitle">{{ category[0] }}</h2>
-        <div class="entries-{{ entries_layout }}">
-          {% for post in category.last %}
-            {% include archive-single.html type=entries_layout %}
-          {% endfor %}
-        </div>
-        <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-      </section>
-    {% endif %}
+  {% if category[1].size > categories_max %}
+  {% assign categories_max = category[1].size %}
+  {% endif %}
   {% endfor %}
-{% endfor %}
+
+  <div class="cat-chips">
+    {% for i in (1..categories_max) reversed %}
+    {% for category in site.categories %}
+    {% if category[1].size == i %}
+    <a href="#{{ category[0] | slugify }}" class="cat-chip">
+      <span class="cat-chip__name">{{ category[0] }}</span>
+      <span class="cat-chip__count">{{ i }}</span>
+    </a>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+  </div>
+
+  <!-- ═══ Category Sections ═══ -->
+  {% assign entries_layout = page.entries_layout | default: 'list' %}
+  {% for i in (1..categories_max) reversed %}
+  {% for category in site.categories %}
+  {% if category[1].size == i %}
+  <section id="{{ category[0] | slugify | downcase }}" class="cat-section">
+    <div class="cat-section__header">
+      <h2 class="cat-section__title">
+        <i class="fas fa-hashtag"></i> {{ category[0] }}
+      </h2>
+      <span class="cat-section__count">{{ category[1].size }} posts</span>
+    </div>
+    <div class="cat-posts-grid">
+      {% for post in category.last %}
+      <a href="{{ post.url | relative_url }}" class="cat-post-card">
+        <div class="cat-post-card__top">
+          <span class="cat-post-card__date">{{ post.date | date: "%b %d, %Y" }}</span>
+          {% assign words = post.content | number_of_words %}
+          {% if words > 0 %}
+          <span class="cat-post-card__read">{{ words | divided_by: 200 | plus: 1 }} min</span>
+          {% endif %}
+        </div>
+        <h3 class="cat-post-card__title">{{ post.title }}</h3>
+        {% if post.excerpt %}
+        <p class="cat-post-card__excerpt">{{ post.excerpt | markdownify | strip_html | truncate: 120 }}</p>
+        {% endif %}
+        <span class="cat-post-card__arrow">Read <i class="fas fa-arrow-right"></i></span>
+      </a>
+      {% endfor %}
+    </div>
+    <a href="#page-title" class="cat-section__back">
+      <i class="fas fa-arrow-up"></i> Back to Top
+    </a>
+  </section>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+
+</div>

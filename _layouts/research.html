@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+<!-- ═══ Research Hero ═══ -->
+<div class="research-hero">
+    <h1 class="research-hero__title"><i class="fas fa-flask"></i> Research</h1>
+    <p class="research-hero__desc">Exploring AI Security, Trustworthy LLMs, and AGI Safety</p>
+</div>
+
+<div class="research-page">
+
+    <!-- ═══ Research Interests ═══ -->
+    <section class="research-section">
+        <div class="research-section__header">
+            <span class="research-section__icon"><i class="fas fa-compass"></i></span>
+            <h2>Research Interests</h2>
+        </div>
+        <div class="research-interests">
+            {% if site.data.cv.research_interests %}
+            {% for item in site.data.cv.research_interests %}
+            <div class="research-interest-card">
+                <div class="interest-icon"><i class="fas fa-{{ item.icon | default: 'brain' }}"></i></div>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- ═══ Publications Timeline ═══ -->
+    {% if site.data.cv.publications %}
+    <section class="research-section">
+        <div class="research-section__header">
+            <span class="research-section__icon"><i class="fas fa-book-open"></i></span>
+            <h2>Publications</h2>
+            <span class="research-section__count">{{ site.data.cv.publications | size }} papers</span>
+        </div>
+        <div class="pub-timeline">
+            {% for pub in site.data.cv.publications %}
+            <div class="pub-timeline-item">
+                <div class="pub-timeline-dot">
+                    <span class="pub-timeline-num">{{ forloop.index }}</span>
+                </div>
+                <div class="pub-timeline-card">
+                    <div class="pub-timeline-date">{{ pub.date }}</div>
+                    <h3 class="pub-timeline-title">{{ pub.title }}</h3>
+                    <p class="pub-timeline-authors">{{ pub.authors }}</p>
+                    <p class="pub-timeline-venue"><em>{{ pub.venue }}</em></p>
+                    {% if pub.link and pub.link != "#" %}
+                    <a href="{{ pub.link }}" target="_blank" class="pub-timeline-link">
+                        <i class="fas fa-external-link-alt"></i> View Paper
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+</div>
